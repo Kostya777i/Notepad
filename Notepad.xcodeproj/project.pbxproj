@@ -16,7 +16,7 @@
 		F283F3D72910D4F2007C1EFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F283F3D62910D4F2007C1EFC /* Assets.xcassets */; };
 		F283F3DA2910D4F2007C1EFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F283F3D82910D4F2007C1EFC /* LaunchScreen.storyboard */; };
 		F283F3E229114C1E007C1EFC /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F283F3E129114C1E007C1EFC /* NoteViewController.swift */; };
-		F283F3E529114CE8007C1EFC /* SettingsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F283F3E429114CE8007C1EFC /* SettingsApp.swift */; };
+		F283F3E529114CE8007C1EFC /* SettingsBlocking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F283F3E429114CE8007C1EFC /* SettingsBlocking.swift */; };
 		F283F3E829114DAF007C1EFC /* SettingsStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F283F3E729114DAF007C1EFC /* SettingsStorageManager.swift */; };
 		F2D0E5532911676500E36B98 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D0E5522911676500E36B98 /* SettingsViewController.swift */; };
 		F2D0E555291167B200E36B98 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D0E554291167B200E36B98 /* AuthenticationViewController.swift */; };
@@ -37,7 +37,7 @@
 		F283F3D92910D4F2007C1EFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F283F3DB2910D4F2007C1EFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F283F3E129114C1E007C1EFC /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
-		F283F3E429114CE8007C1EFC /* SettingsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsApp.swift; sourceTree = "<group>"; };
+		F283F3E429114CE8007C1EFC /* SettingsBlocking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBlocking.swift; sourceTree = "<group>"; };
 		F283F3E729114DAF007C1EFC /* SettingsStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStorageManager.swift; sourceTree = "<group>"; };
 		F2D0E5522911676500E36B98 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F2D0E554291167B200E36B98 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 		F283F3E329114CCB007C1EFC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F283F3E429114CE8007C1EFC /* SettingsApp.swift */,
+				F283F3E429114CE8007C1EFC /* SettingsBlocking.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -234,7 +234,7 @@
 				F283F3CB2910D4F2007C1EFC /* AppDelegate.swift in Sources */,
 				F2D0E555291167B200E36B98 /* AuthenticationViewController.swift in Sources */,
 				F283F3D52910D4F2007C1EFC /* Notepad.xcdatamodeld in Sources */,
-				F283F3E529114CE8007C1EFC /* SettingsApp.swift in Sources */,
+				F283F3E529114CE8007C1EFC /* SettingsBlocking.swift in Sources */,
 				F208F8E52913C62D002D6B63 /* AlertExtension.swift in Sources */,
 				F283F3E829114DAF007C1EFC /* SettingsStorageManager.swift in Sources */,
 			);

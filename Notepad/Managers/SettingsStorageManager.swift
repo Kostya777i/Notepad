@@ -14,38 +14,60 @@ class SettingsStorageManager {
     private let defaultPassword = "1234"
     private let userDefaults = UserDefaults.standard
     private let fileExtension = "plist"
-    private let keyForSettings = "settings"
+    private let keyForPasswordSetting = "settingsPassword"
+    private let keyForFaceIDSetting = "settingFaceID"
     private let keyForPassword = "password"
     private let fileDirectory = FileManager.default.urls(for: .desktopDirectory, in: .userDomainMask).first!
-    private var archiveSettingsURL: URL!
+    private var archivePasswordSettingURL: URL!
     private var archivePasswordURL: URL!
+    private var archiveFaceIDSetting: URL!
     
     private init() { if #available(iOS 16.0, *) {
-        archiveSettingsURL = fileDirectory.appending(component: keyForSettings).appendingPathExtension(fileExtension)
+        archivePasswordSettingURL = fileDirectory.appending(component: keyForPasswordSetting).appendingPathExtension(fileExtension)
+        archiveFaceIDSetting = fileDirectory.appending(component: keyForFaceIDSetting).appendingPathExtension(fileExtension)
         archivePasswordURL = fileDirectory.appending(component: keyForPassword).appendingPathExtension(fileExtension)
     } else {
-        archiveSettingsURL = fileDirectory.appendingPathComponent(keyForSettings).appendingPathExtension(fileExtension)
+        archivePasswordSettingURL = fileDirectory.appendingPathComponent(keyForPasswordSetting).appendingPathExtension(fileExtension)
+        archiveFaceIDSetting = fileDirectory.appendingPathComponent(keyForFaceIDSetting).appendingPathExtension(fileExtension)
         archivePasswordURL = fileDirectory.appendingPathComponent(keyForPassword).appendingPathExtension(fileExtension)
     }
     }
     
-    func saveSettings(with setting: SettingsApp) {
-        var settings = fetchSettings()
+    func saveAccessSettingsByPassword(with setting: AccessSettings) {
+        var settings = fetchAccessSettingsByPassword()
         settings = setting
         
         guard let data = try? JSONEncoder().encode(settings) else { return }
-        userDefaults.set(data, forKey: keyForSettings)
+        userDefaults.set(data, forKey: keyForPasswordSetting)
     }
     
-    func fetchSettings() -> SettingsApp {
-        guard let data = userDefaults.object(forKey: keyForSettings) as? Data else {
-            return SettingsApp(faceIDEnable: false)
+    func fetchAccessSettingsByPassword() -> AccessSettings {
+        guard let data = userDefaults.object(forKey: keyForPasswordSetting) as? Data else {
+            return AccessSettings(accessSetting: false)
         }
-        guard let settings = try? JSONDecoder().decode(SettingsApp.self, from: data) else {
-            return SettingsApp(faceIDEnable: false)
+        guard let settings = try? JSONDecoder().decode(AccessSettings.self, from: data) else {
+            return AccessSettings(accessSetting: false)
         }
         return settings
     } 
+    
+    func saveAccessSettingsByFaceID(with setting: SettingFaceID) {
+        var settings = fetchAccessSettingsByFaceID()
+        settings = setting
+        
+        guard let data = try? JSONEncoder().encode(settings) else { return }
+        userDefaults.set(data, forKey: keyForFaceIDSetting)
+    }
+    
+    func fetchAccessSettingsByFaceID() -> SettingFaceID {
+        guard let data = userDefaults.object(forKey: keyForFaceIDSetting) as? Data else {
+            return SettingFaceID(faceIDEnable: false)
+        }
+        guard let settings = try? JSONDecoder().decode(SettingFaceID.self, from: data) else {
+            return SettingFaceID(faceIDEnable: false)
+        }
+        return settings
+    }
     
     func savePassword(with password: CodePassword) {
         var newPassword = fetchPassword()

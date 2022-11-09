@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
-        let access = SettingsStorageManager.shared.fetchSettings().faceIDEnable
+        let access = SettingsStorageManager.shared.fetchAccessSettingsByPassword().accessSetting
         if access == true {
             window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "authenticalView")
         } else {
