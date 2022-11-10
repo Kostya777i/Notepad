@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F208F8E52913C62D002D6B63 /* AlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F208F8E42913C62D002D6B63 /* AlertExtension.swift */; };
+		F208F8E52913C62D002D6B63 /* AuthenticationAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F208F8E42913C62D002D6B63 /* AuthenticationAlert.swift */; };
 		F208F8E92913CE31002D6B63 /* KeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F208F8E82913CE31002D6B63 /* KeyboardExtension.swift */; };
 		F283F3CB2910D4F2007C1EFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F283F3CA2910D4F2007C1EFC /* AppDelegate.swift */; };
 		F283F3CF2910D4F2007C1EFC /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F283F3CE2910D4F2007C1EFC /* NotesTableViewController.swift */; };
@@ -22,11 +22,11 @@
 		F2D0E555291167B200E36B98 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D0E554291167B200E36B98 /* AuthenticationViewController.swift */; };
 		F2D0E55929118A7300E36B98 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D0E55829118A7300E36B98 /* StorageManager.swift */; };
 		F2DDEEF329166C610058F439 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DDEEF229166C610058F439 /* AlertController.swift */; };
-		F2DDEEF529168B2F0058F439 /* SettingControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DDEEF429168B2F0058F439 /* SettingControllerExtension.swift */; };
+		F2DDEEF529168B2F0058F439 /* PasswordEditAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DDEEF429168B2F0058F439 /* PasswordEditAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F208F8E42913C62D002D6B63 /* AlertExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExtension.swift; sourceTree = "<group>"; };
+		F208F8E42913C62D002D6B63 /* AuthenticationAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationAlert.swift; sourceTree = "<group>"; };
 		F208F8E82913CE31002D6B63 /* KeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardExtension.swift; sourceTree = "<group>"; };
 		F283F3C72910D4F2007C1EFC /* Notepad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notepad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F283F3CA2910D4F2007C1EFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,7 +43,7 @@
 		F2D0E554291167B200E36B98 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		F2D0E55829118A7300E36B98 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		F2DDEEF229166C610058F439 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
-		F2DDEEF429168B2F0058F439 /* SettingControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingControllerExtension.swift; sourceTree = "<group>"; };
+		F2DDEEF429168B2F0058F439 /* PasswordEditAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordEditAlert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +60,8 @@
 		F208F8E32913C5F4002D6B63 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				F208F8E42913C62D002D6B63 /* AlertExtension.swift */,
-				F2DDEEF429168B2F0058F439 /* SettingControllerExtension.swift */,
+				F208F8E42913C62D002D6B63 /* AuthenticationAlert.swift */,
+				F2DDEEF429168B2F0058F439 /* PasswordEditAlert.swift */,
 				F208F8E82913CE31002D6B63 /* KeyboardExtension.swift */,
 				F2DDEEF229166C610058F439 /* AlertController.swift */,
 			);
@@ -227,7 +227,7 @@
 				F283F3E229114C1E007C1EFC /* NoteViewController.swift in Sources */,
 				F283F3CF2910D4F2007C1EFC /* NotesTableViewController.swift in Sources */,
 				F2D0E5532911676500E36B98 /* SettingsViewController.swift in Sources */,
-				F2DDEEF529168B2F0058F439 /* SettingControllerExtension.swift in Sources */,
+				F2DDEEF529168B2F0058F439 /* PasswordEditAlert.swift in Sources */,
 				F2D0E55929118A7300E36B98 /* StorageManager.swift in Sources */,
 				F2DDEEF329166C610058F439 /* AlertController.swift in Sources */,
 				F208F8E92913CE31002D6B63 /* KeyboardExtension.swift in Sources */,
@@ -235,7 +235,7 @@
 				F2D0E555291167B200E36B98 /* AuthenticationViewController.swift in Sources */,
 				F283F3D52910D4F2007C1EFC /* Notepad.xcdatamodeld in Sources */,
 				F283F3E529114CE8007C1EFC /* SettingsBlocking.swift in Sources */,
-				F208F8E52913C62D002D6B63 /* AlertExtension.swift in Sources */,
+				F208F8E52913C62D002D6B63 /* AuthenticationAlert.swift in Sources */,
 				F283F3E829114DAF007C1EFC /* SettingsStorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

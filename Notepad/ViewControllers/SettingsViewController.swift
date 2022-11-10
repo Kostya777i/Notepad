@@ -46,7 +46,7 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func editPasswordButtonPressed() {
-        showAlert()
+        showAlertForPassword()
     }
     
     private func settingView() {

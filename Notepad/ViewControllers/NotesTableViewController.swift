@@ -87,7 +87,7 @@ extension NotesTableViewController {
         
         let alert = AlertController(title: title, message: "What do you want to do?", preferredStyle: .alert)
         
-        alert.action(note: note) { newValue in
+        alert.actionWithNote(note: note) { newValue in
             if let note = note, let completion = completion {
                 StorageManager.shared.edit(note, newNote: newValue)
                 completion()

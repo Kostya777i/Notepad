@@ -8,6 +8,7 @@
 import UIKit
 
 class AlertController: UIAlertController {
+    
     func action(completion: @escaping (String) -> Void) {
         let saveAction = UIAlertAction(title: "Сохранить", style: .default) { _ in
             guard let newValue = self.textFields?.first?.text else { return }
@@ -24,7 +25,7 @@ class AlertController: UIAlertController {
         }
     }
     
-    func action(note: Note?, completion: @escaping (String) -> Void) {
+    func actionWithNote(note: Note?, completion: @escaping (String) -> Void) {
         let saveAction = UIAlertAction(title: "Save", style: .default) { _ in
             guard let newValue = self.textFields?.first?.text else { return }
             guard !newValue.isEmpty else { return }

@@ -7,10 +7,38 @@
 
 import UIKit
 
-extension UIView {
+// MARK: - Extension for function key "Done" in keyboard and application values
+
+extension AuthenticationViewController {
     
-    func makeDissmissKeyboardTap() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(self.endEditing))
-        self.addGestureRecognizer(tap)
+    // Hiding keyboard with tap and applying entered value
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+        
+        doneButton()
+    }
+    
+    func addDoneButton(_ textField: UITextField) {
+        
+        let keyboardToolbar = UIToolbar()
+        keyboardToolbar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(title: "Done",
+                                         style: .done,
+                                         target: self,
+                                         action: #selector(didTapDone))
+    
+        let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
+                                        target: nil,
+                                        action: nil)
+    
+    keyboardToolbar.items = [flexBarButton, doneButton]
+        textField.inputAccessoryView = keyboardToolbar
+    }
+
+    @objc private func didTapDone() {
+        view.endEditing(true)
+        doneButton()
     }
 }

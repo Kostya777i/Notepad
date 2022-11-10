@@ -16,9 +16,10 @@ class AuthenticationViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        passwordTextField.isSecureTextEntry = true
         self.passwordTextField.delegate = self
-        view.makeDissmissKeyboardTap()
         buttonSetting()
+        addDoneButton(passwordTextField)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,12 +39,12 @@ class AuthenticationViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func doneButton() {
-        // Проверка на nil для вызова showAlert если поле ввода пусто
+        // Check for nil for call showAlert if the input field is empty
         guard let inputPassword = passwordTextField.text, !inputPassword.isEmpty else {
             showAlert(with: "Поле пароля не заполнено", and: "Введите пароль")
             return
         }
-        // Проверка пароля
+        // Check password
         verificationPassword()
     }
     
@@ -59,7 +60,7 @@ class AuthenticationViewController: UIViewController, UITextFieldDelegate {
         if passwordTextField.text == currentPassword.password {
             performSegue(withIdentifier: "access", sender: nil)
         } else {
-            passwordAlert(with: "Неверный пароль", and: "Попробуйте еще раз")
+            showAlert(with: "Неверный пароль", and: "Попробуйте еще раз")
         }
     }
     
@@ -81,10 +82,6 @@ class AuthenticationViewController: UIViewController, UITextFieldDelegate {
                     self.verificationPassword()
                 }
             }
-        } else {
-            if let error {
-                self.showAlert(title: "Нет доступа", message: "\(error.localizedDescription)")
-            }
         }
     }
     
@@ -101,14 +98,5 @@ private extension AuthenticationViewController {
             [weak self] in
                 self?.view.layoutIfNeeded()
         }
-    }
-}
-
-extension AuthenticationViewController {
-    private func showAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let dismissAction = UIAlertAction(title: "Отмена", style: .cancel)
-        alert.addAction(dismissAction)
-        present(alert, animated: true )
     }
 }

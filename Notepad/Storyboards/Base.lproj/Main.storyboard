@@ -30,9 +30,9 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xPD-kH-h0m">
-                                <rect key="frame" x="80" y="200" width="215" height="34"/>
+                                <rect key="frame" x="80" y="220" width="215" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go" textContentType="password"/>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -42,7 +42,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xPD-kH-h0m" secondAttribute="trailing" constant="80" id="QmJ-7R-Q98"/>
                             <constraint firstItem="izk-bK-qqd" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Yio-2U-MuT"/>
                             <constraint firstItem="izk-bK-qqd" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="awn-E9-tUz"/>
-                            <constraint firstItem="xPD-kH-h0m" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="mI4-wv-dRm"/>
+                            <constraint firstItem="xPD-kH-h0m" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="220" id="mI4-wv-dRm"/>
                         </constraints>
                     </view>
                     <connections>

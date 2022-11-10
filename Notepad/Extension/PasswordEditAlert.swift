@@ -1,5 +1,5 @@
 //
-//  SettingControllerExtension.swift
+//  PasswordEditAlert.swift
 //  Notepad
 //
 //  Created by Konstantin Losev on 05.11.2022.
@@ -8,7 +8,8 @@
 import UIKit
 
 extension SettingsViewController {
-    func showAlert(completion: (() -> Void)? = nil) {
+    
+    func showAlertForPassword(completion: (() -> Void)? = nil) {
         let title = "Новый Пароль"
         
         let alert = AlertController(title: title, message: "Enter new Password", preferredStyle: .alert)
