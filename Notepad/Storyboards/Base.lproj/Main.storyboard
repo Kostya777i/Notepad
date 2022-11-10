@@ -108,76 +108,76 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="S74-wv-DOH">
-                                <rect key="frame" x="20" y="100" width="335" height="92"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="RwP-nr-R7f">
+                                <rect key="frame" x="20" y="50" width="335" height="156.5"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="wJi-Ja-KRb">
-                                        <rect key="frame" x="0.0" y="0.0" width="265" height="92"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cpc-Gf-vfB">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IMm-iS-TXC">
-                                                <rect key="frame" x="0.0" y="0.0" width="41.5" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="265" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9D9-wD-Ogn">
-                                                <rect key="frame" x="0.0" y="61" width="41.5" height="31"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Rcj-sc-3c5">
-                                        <rect key="frame" x="275" y="0.0" width="60" height="92"/>
-                                        <subviews>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tyb-Jb-Nhf">
-                                                <rect key="frame" x="11" y="0.0" width="51" height="31"/>
+                                                <rect key="frame" x="275" y="0.0" width="62" height="31"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="zWj-b9-Cjd"/>
+                                                </constraints>
                                                 <connections>
                                                     <action selector="accessSwitchSetting" destination="mzs-sT-Q5J" eventType="valueChanged" id="pO6-Hf-BYc"/>
                                                 </connections>
                                             </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6M8-4Z-EKk">
+                                        <rect key="frame" x="0.0" y="61" width="335" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9D9-wD-Ogn">
+                                                <rect key="frame" x="0.0" y="0.0" width="265" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mJ6-NN-47x">
-                                                <rect key="frame" x="11" y="61" width="51" height="31"/>
+                                                <rect key="frame" x="275" y="0.0" width="62" height="31"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="Xy8-04-KZ6"/>
+                                                </constraints>
                                                 <connections>
                                                     <action selector="authenticationSwitch" destination="mzs-sT-Q5J" eventType="valueChanged" id="SBi-ZV-ld2"/>
                                                 </connections>
                                             </switch>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="1I4-C8-8EM"/>
-                                        </constraints>
                                     </stackView>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3Ld-yq-lzn">
-                                <rect key="frame" x="20" y="212" width="335" height="34.5"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVD-1F-79k">
-                                        <rect key="frame" x="0.0" y="0.0" width="157.5" height="34.5"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                        <connections>
-                                            <action selector="editPasswordButtonPressed" destination="mzs-sT-Q5J" eventType="touchUpInside" id="O1h-yb-mjD"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0O6-u9-txf">
-                                        <rect key="frame" x="177.5" y="0.0" width="157.5" height="34.5"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3Ld-yq-lzn">
+                                        <rect key="frame" x="0.0" y="122" width="335" height="34.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVD-1F-79k">
+                                                <rect key="frame" x="0.0" y="0.0" width="157.5" height="34.5"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <connections>
+                                                    <action selector="editPasswordButtonPressed" destination="mzs-sT-Q5J" eventType="touchUpInside" id="O1h-yb-mjD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0O6-u9-txf">
+                                                <rect key="frame" x="177.5" y="0.0" width="157.5" height="34.5"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="M25-oo-eo7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="S74-wv-DOH" firstAttribute="top" secondItem="M25-oo-eo7" secondAttribute="top" constant="100" id="BXa-q2-WlU"/>
-                            <constraint firstItem="3Ld-yq-lzn" firstAttribute="leading" secondItem="M25-oo-eo7" secondAttribute="leading" constant="20" id="CUI-Qp-5bM"/>
-                            <constraint firstItem="3Ld-yq-lzn" firstAttribute="top" secondItem="S74-wv-DOH" secondAttribute="bottom" constant="20" id="Jnl-3R-KIz"/>
-                            <constraint firstItem="M25-oo-eo7" firstAttribute="trailing" secondItem="S74-wv-DOH" secondAttribute="trailing" constant="20" id="SZS-Z7-VR7"/>
-                            <constraint firstItem="M25-oo-eo7" firstAttribute="trailing" secondItem="3Ld-yq-lzn" secondAttribute="trailing" constant="20" id="fbA-gx-NRk"/>
-                            <constraint firstItem="S74-wv-DOH" firstAttribute="leading" secondItem="M25-oo-eo7" secondAttribute="leading" constant="20" id="m6a-1n-xgD"/>
+                            <constraint firstItem="M25-oo-eo7" firstAttribute="trailing" secondItem="RwP-nr-R7f" secondAttribute="trailing" constant="20" id="Q0r-Ax-THy"/>
+                            <constraint firstItem="RwP-nr-R7f" firstAttribute="top" secondItem="M25-oo-eo7" secondAttribute="top" constant="50" id="Rg8-y9-SU7"/>
+                            <constraint firstItem="RwP-nr-R7f" firstAttribute="leading" secondItem="M25-oo-eo7" secondAttribute="leading" constant="20" id="ZYu-o7-onr"/>
                         </constraints>
                     </view>
                     <connections>

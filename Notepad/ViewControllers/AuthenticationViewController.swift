@@ -86,8 +86,8 @@ class AuthenticationViewController: UIViewController, UITextFieldDelegate {
     }
     
     private func animateLayouts() {
-        constraintPasswordTaxtField.constant = 200
-        animateLauout(duration: 0.6, delay: 0.2)
+        constraintPasswordTaxtField.constant = 220
+        animateLauout(duration: 0.6, delay: 0.1)
     }
 }
 

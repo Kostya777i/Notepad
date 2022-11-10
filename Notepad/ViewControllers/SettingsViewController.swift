@@ -55,19 +55,28 @@ class SettingsViewController: UIViewController {
         labelFaceIDSettings()
     }
     
+    private func hidingSettings(enabled: Bool) {
+        currentAuthenticationLabel.isHidden = enabled
+        currentAuthenticationSwitch.isHidden = enabled
+        editPasswordButton.isHidden = enabled
+        deletePasswordButton.isHidden = enabled
+    }
+    
     private func labelAccessSettings() {
         if accessByAutenticationSwitch.isOn {
             accesByAuthenticationLabel.text = "Блокировка доступа: ON/off"
             accesByAuthenticationLabel.textColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+            hidingSettings(enabled: false)
         } else if accessByAutenticationSwitch.isOn == false {
             accesByAuthenticationLabel.text = "Блокировка доступа: on/OFF"
             accesByAuthenticationLabel.textColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
+            hidingSettings(enabled: true)
         }
     }
     
     private func labelFaceIDSettings() {
         if currentAuthenticationSwitch.isOn {
-            currentAuthenticationLabel.text = "Face ID: Enable"
+            currentAuthenticationLabel.text = "Face ID: ON"
         } else if currentAuthenticationSwitch.isOn == false {
             currentAuthenticationLabel.text = "Face ID: OFF"
         }
