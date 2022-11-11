@@ -33,6 +33,7 @@ class SettingsViewController: UIViewController {
         }
         
         labelAccessSettings()
+        passwordCheckForFirstLaunch()
     }
     
     @IBAction func authenticationSwitch() {
@@ -53,6 +54,12 @@ class SettingsViewController: UIViewController {
         editPasswordButton.setTitle("Edit Password", for: .normal)
         labelAccessSettings()
         labelFaceIDSettings()
+    }
+    
+    private func passwordCheckForFirstLaunch() {
+        if SettingsStorageManager.shared.fetchPassword().password == "" {
+            showAlertForPassword()
+        } 
     }
     
     private func hidingSettings(enabled: Bool) {

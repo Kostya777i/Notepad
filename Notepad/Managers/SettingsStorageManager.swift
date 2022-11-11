@@ -11,7 +11,6 @@ class SettingsStorageManager {
     
     static let shared = SettingsStorageManager()
     
-    private let defaultPassword = "1234"
     private let userDefaults = UserDefaults.standard
     private let fileExtension = "plist"
     private let keyForPasswordSetting = "settingsPassword"
@@ -79,10 +78,10 @@ class SettingsStorageManager {
     
     func fetchPassword() -> CodePassword {
         guard let data = userDefaults.object(forKey: keyForPassword) as? Data else {
-            return CodePassword(password: defaultPassword)
+            return CodePassword(password: "")
         }
         guard let password = try? JSONDecoder().decode(CodePassword.self, from: data) else {
-            return CodePassword(password: defaultPassword)
+            return CodePassword(password: "")
         }
         return password
     }
