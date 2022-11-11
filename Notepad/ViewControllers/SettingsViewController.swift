@@ -57,9 +57,7 @@ class SettingsViewController: UIViewController {
     }
     
     private func passwordCheckForFirstLaunch() {
-        if SettingsStorageManager.shared.fetchPassword().password == "" {
-            showAlertForPassword()
-        } 
+        if SettingsStorageManager.shared.fetchPassword().password == "" { showAlertForPassword() } 
     }
     
     private func hidingSettings(enabled: Bool) {
