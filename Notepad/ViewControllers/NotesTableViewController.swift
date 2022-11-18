@@ -45,6 +45,18 @@ class NotesTableViewController: UITableViewController {
         }
     }
     
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let currentNote = notes[indexPath.row]
+        
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { _, _, _ in
+            self.notes.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            StorageManager.shared.delete(currentNote)
+        }
+        
+        return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
+    
     private func setupView() {
         view.backgroundColor = #colorLiteral(red: 0.9696926475, green: 0.997697413, blue: 0.856333971, alpha: 1)
         tableView.backgroundColor = #colorLiteral(red: 0.9696926475, green: 0.997697413, blue: 0.856333971, alpha: 1)
