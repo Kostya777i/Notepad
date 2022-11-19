@@ -54,7 +54,9 @@ class NotesTableViewController: UITableViewController {
             StorageManager.shared.delete(currentNote)
         }
         
-        return UISwipeActionsConfiguration(actions: [deleteAction])
+        let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+        configuration.performsFirstActionWithFullSwipe = false
+        return configuration
     }
     
     private func setupView() {
