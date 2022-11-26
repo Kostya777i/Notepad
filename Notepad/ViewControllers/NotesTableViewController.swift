@@ -37,12 +37,12 @@ class NotesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let note = notes[indexPath.row]
-        tableView.deselectRow(at: indexPath, animated: true)
-        
-        showAlert(note: note) {
-            tableView.reloadRows(at: [indexPath], with: .automatic)
-        }
+//        let note = notes[indexPath.row]
+//        tableView.deselectRow(at: indexPath, animated: true)
+//
+//        showAlert(note: note) {
+//            tableView.reloadRows(at: [indexPath], with: .automatic)
+//        }
     }
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
@@ -88,8 +88,13 @@ class NotesTableViewController: UITableViewController {
     
     private func setupTabBar() {
         tabBarController?.tabBar.tintColor = .darkGray
-        
-        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        let note = notes[indexPath.row]
+        let noteVC = segue.destination as! NoteViewController
+        noteVC.note = note.name
     }
 }
 
