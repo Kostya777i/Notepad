@@ -9,7 +9,7 @@ import UIKit
 
 class NoteViewController: UIViewController {
     
-    var note: String!
+    var note: Note!
     
     var textView: UITextView = {
         let view = UITextView()
@@ -24,9 +24,21 @@ class NoteViewController: UIViewController {
     }
     
     private func text() {
-        guard let text = note  else { return }
+        guard let text = note.name  else { return }
         textView.text = text
     }
+    
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        super .touchesBegan(touches, with: event)
+//        view.endEditing(true)
+//
+//        fetchText()
+//    }
+    
+//    private func fetchText() {
+//        guard let text = textView.text else { return }
+//        StorageManager.shared.edit(note, newNote: text)
+//    }
     
     private func setupConstraints() {
         view.addSubview(textView)
@@ -38,5 +50,9 @@ class NoteViewController: UIViewController {
             textView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
             textView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10)
         ])
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+
     }
 }

@@ -94,7 +94,7 @@ class NotesTableViewController: UITableViewController {
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
         let note = notes[indexPath.row]
         let noteVC = segue.destination as! NoteViewController
-        noteVC.note = note.name
+        noteVC.note = note
     }
 }
 
